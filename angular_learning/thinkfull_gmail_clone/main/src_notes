@@ -1,0 +1,267 @@
+https://www.thinkful.com/learn/angularjs-tutorial-build-a-gmail-clone/#Setup-Scopes-and-Directives
+
+
+
+    
+    
+    
+    TOPICS COVERED & NOTES
+    
+MVC
+    -Model view controller: Model is the data, view is the UI (HTML and presentation),
+    controller is logic that communicates between the two.
+
+Scopes and Directives
+    
+    ng-controller:
+    
+    Scopes:
+        -They hold your data/models and cooperate with controllers and give
+        them the stuff they need. Similar to JavaScript concept of scope.
+        -ng-app is application scope
+        -ng-controller is controller scope, determines where controller can
+        operate. You can have multiple ones. You can declare them in
+        routeconfig OR on the views themselves using ng-controller="" in a tag.
+    directives:
+    
+ngView and Routes
+    -Ng view tells angular where to inject HTML based on the URL a user visits.
+    ajax injects all views.
+    The inbox.html file would also have it's corresponding controller (InboxCtrl).
+    
+Modules
+    -Every app needs a module. This can get and set depending on how you use it.
+    -You can call "angular.module('appname')" without quotes for a reference to the
+    module in order to register controllers, factories, filters, etc.
+    
+Route dependency and injection
+    -routeprovider is included as a seperate module, represented in the array as
+    'ngRoute'
+    -ngRoute MUST match version number.
+    -You can set contorllers in routeconfig and then link them in the main html file.
+    -each module has a config function and is run before most other callback functions.
+        app.config(function() {});
+
+    
+        
+Configuring routes
+    
+    -controllerAs binds the controller as an object under a namesake, controller matches the
+    JS file.
+    -Declaring controller inline: ng-controller="InboxCtrl as inbox"
+
+
+Controllers
+    -Controller is a middleman
+    -Controller is given a route to a view and JS dependency injections (model?)
+    it will tell the view what it can do by giving it scope variables and maybe
+    some functions
+    -SHOUlD only be used for binding the model to the view (initializing the view)
+    and adding helper functions to the view. Use very little logic
+    -A good controller has very little logic
+    -Each controller has access to $scope and some html.
+    -$Scope isn't the only way to pass data, some people use Controller As
+    and this.
+    
+
+Factories
+
+    -Factories can be used for a lot of things
+    -Good for creating reusable features and codeblocks
+    -Use it to talk to APIs, store user authentication
+    -Exports: helps with explicit internal naming which helps you see which
+    methods and variables are private(?)
+    -use HTTP to make get request, $http() returns a promise
+
+
+Promises
+
+    -Promises are expressed with $q, use it to create conditionals
+    ways to respond to http request
+    -https://docs.angularjs.org/api/ng/service/$q
+    -
+        var deferred = $q.defer();
+        deferred.promise.then(
+        function whenThingsGoSunny(){},
+        function whenThingsDontGoSoSunny(){}
+        )
+
+    -when using http service:
+        
+        $http({method: 'GET', url: '/someUrl'})
+            .success(function(data, status, headers, config)
+            {
+            //this is called async when the response is available
+            }
+            )
+            
+            .error(function(data, status, headers, config)
+            {
+                //if an error occurs or server gives error response
+            });
+
+    -Hooking up factory and controller:
+    
+        app.controller('InboxCtrl', function($scope, InboxFactory)
+        {
+            InboxFactory.getMessages()
+            .success(function(jsonData, statusCode)
+            {
+                console.log('The request was succesful!', statusCode, jsonData);
+                //now add email messages to controller scope.
+                $scope.emails = jsonData;
+            });
+        });
+        
+        
+
+Templating
+    You can put filters directly onto the views using double bracket syntax.
+    
+    You can modify strings, numbers and make if else logic.
+
+
+
+
+Directives Overview
+
+    You can use custom tags/elements using directives, for example:
+    
+    <my-custom-element></my-custom-element>
+    
+    In JS file:
+    
+    app.directive('myCustomElement', function myCustomElement()
+    {
+        return
+        {
+            restrict: 'EA',
+            replace: true,
+            scope: true,
+            template:
+            [
+                "<div>"
+                "   <h1> My Custom Element's Heading</h1>",
+                "   <pre>{{ ctrl.expression | json}}</pre>,"
+                "</div>"
+            ].join(""),
+            controllerAs:'ctrl',
+            controller: function ($scope)
+            {
+                this.expression=
+                {
+                    property: "Example"
+                }
+            },
+            link: function (scope, element, attrs){}
+        }
+    
+    });
+    
+    
+    
+Factories and Directives Working together
+
+
+
+
+Built in Directives
+    Angular comes with useful directives like ng-show, ng-repeat, ng-click, ng-model
+
+
+Cloaking
+Debugging
+
+    Name your anonymous functions so that he errors show up in the debugger:
+    
+    Here it is before:
+    app.factory('InboxFactory',
+    function ($q, $http) {}
+    ):
+    
+    ...and now after:
+    app.factory('InboxFactory',
+    function InboxFactory ($q, $http) { }
+    ):
+
+
+Changes:
+    We've made a bunch of changes to the project to give it a more complete feel, here's a list of what we did:
+    1.
+    We added a new route for specific Email messages that accepts an :id parameter
+    2.
+    We added some slick CSS styles :)
+    3.
+    We changed our controllers to all make use of the 'Controller As' syntax
+    4.
+    We added the ngSanitize library to use the ng-bind-html directive in the Email directive
+    5.
+    We uncommented the goToMessage method in our Inbox Factory that will navigate to the new route
+    6.
+    We simplified our controllers further so they now only use the title on 'this' (Controller As)
+    7.
+    We added the Email Controller and view
+    8.
+    We added the Email Factory which adds a bunch of factory and JavaScript alerts where server communication would be
+    appropriate
+    9.
+    We added the Email Directive and its template as well as using it in our Email View
+    10.
+    We added new JSON files for each of the messages
+    11.
+    We added the ng-cloak, however it isn't used in this application as ngView covers this for us :)
+
+Don't use jQuery when using angular, just use angular instead. ANgular takes care of the dom:
+
+        Getting the value of a textarea? You might be tempted to do this:
+        <textarea></textarea>
+        <script>
+        var elem = document.querySelector('textarea');
+        var value = elem.value;
+        </script>
+        With Angular, the ng-model will keep this updated for us, we just reference it:
+        <textarea ng-model="myModel"></textarea>
+        <script>
+        app.controller('SomeCtrl', function SomeCtrl($scope) {
+        // binds and keeps the value updated at all times
+        // no need to re-query the value at any time
+        // which means we can pass the value straight
+        // back to the server for example
+        $scope.myModel = '';
+        })
+        </script>
+
+Rando   *CHECK ALL DOCUMENTS FOR QUESTIONS*
+    **Controllers vs Directives**
+       -Controllers are the glue between models and services. The less glue, the better.
+       Try to use directives more.?
+       -use a directive when:
+           -the goal is to manipulate the DOM
+           -you want to create a reusable component
+       -Use a controller when:
+           -all you need is to bind values to the DOM
+        -what does controllerAs do?
+        -ng-model?
+        -ng-app and ng-controller are directives(?), why are they seperate files then?
+        -How do you determine how to switch between different routes?
+        -In order to keep our controllers more reusable, we would hook up data in our controller
+        via a Factory or Service.
+        -What is the directive file doing?
+        -is the Q the root scope?
+        -WHat does exports do in factory file?
+        -learn more about promises
+        -In the tutorial, the controller has InboxFactory as an argument,
+        but not in the codecheck. How are they being tied together?
+        -Also the syntax differs: app.controller vs angular.module.controller
+            -Different syntaxes: http://stackoverflow.com/questions/14837359/what-is-the-benefit-of-defining-angular-app
+        -"Hooking up factory and controller" guide does not follow example, how are they hooked up?
+        -"In Angular these are called directives and come with their own templates(either in
+        another html file or a string, the same as how controllers operate).
+        -I don't understand how directives "replace" works, or scope or the .join or link
+        -You can instantiate controllers by using directives?
+        
+        
+   Source:
+       http://stackoverflow.com/questions/31481000/difference-between-and-when-to-use-controllers-vs-directives
+       http://stackoverflow.com/questions/18757679/angularjs-directives-vs-controllers
+       http://kirkbushell.me/when-to-use-directives-controllers-or-services-in-angular/

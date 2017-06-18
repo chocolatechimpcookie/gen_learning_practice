@@ -1,0 +1,38 @@
+<div class="inbox">
+    <div class="search-bar">
+        <div class="inbox__count">
+            You have {{inbox.messages.length && inbox.messages.length || 'no'}} messages
+<!--Some kind of logic here            -->
+        </div>
+        <div ng-hide="!inbox.messages.length">
+<!--Some kind of logic here            -->
+            <input type="text" class="inbox__search"
+                ng-model="inbox.search" placeholder="Search by 'from', e.g. TicketMaster">
+        </div>
+    </div>
+        
+    <ul class="inbox__list">
+        <li ng-show="!inbox.messages.length" class="no-emails">
+<!-- if no length in messages, no emails           -->
+            No messages! Try sending one to a friend.
+        </li>
+<!--so does this mean ng-repeat doesn't even show up if empty? can you control what to replace it?-->
+        <li ng-repeat="message in inbox.messages | filter:{ inbox.search}">
+<!--ng repeat in action-->
+            <div class="inbox__list-info">
+                <p class="inbox__list-from"> From: {{ message.from}}</p>
+                <p class="inbox__list-date"> {{message.date | date: 'dd/MM/yyyy' }}</p>
+                <p class="inbox__list-subject"> {{message.subject }}</p>
+            </div>
+            
+            <div class="inbox__list-actions">
+                <a href="" ng-click="inbox.goToMessage(message.id);">
+                    Read
+                </a>
+                <a href="" ng-click="inbox.deleteMessage(id, $index);">
+                    Delete
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>

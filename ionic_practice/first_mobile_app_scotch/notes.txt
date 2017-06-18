@@ -1,0 +1,81 @@
+Stopped: "With that we have a list of tasks presented with cards in our view. Now to create a new "
+Typing out first button
+
+
+
+https://scotch.io/tutorials/create-your-first-mobile-app-with-angularjs-and-ionic
+
+
+Step 1: Installing
+	Bugs:
+
+		npm WARN install Couldn't install optional dependency: EACCES: permission denied, mkdir '/home/cina/.npm/spdx-expression-parse/1.0.4/package'
+		npm WARN deprecated minimatch@0.2.14: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+		npm WARN deprecated minimatch@0.3.0: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+
+
+
+	Having permission problems. Uninstalled npm. Installed nvm.
+	https://github.com/leob/ionic-quickstarter/wiki/Setting-up-Ionic-and-Cordova
+
+
+
+
+Creating a new ionic:
+
+	ionic start {appname} {template}
+	
+	
+	
+File structure
+
+	├── hooks          // custom cordova hooks to execute on specific commands
+	├── platforms      // iOS/Android specific builds will reside here
+	├── plugins        // where your cordova/ionic plugins will be installed
+	├── resources        // icon and splash screen
+	├── scss           // scss code, which will output to www/css/
+	|── www         // application - JS code and libs, CSS, images, etc.
+		 |---------css                 //customs styles
+		 |---------img               //app images
+		 |---------js                  //angular app and custom JS
+		 |---------lib                //third party libraries
+		 |---------index.html  //app master page        
+	├── bower.json     // bower dependencies
+	├── config.xml     // cordova configuration
+	├── gulpfile.js    // gulp tasks
+	├── ionic.project  // ionic configuration
+	├── package.json   // node dependencies
+	
+	
+Adding IOS issues:
+	When I tried this command:
+		ionic platform add ios
+
+		WARNING: Applications for platform ios can not be built on this OS - linux.
+
+		Adding ios project...
+		
+		Creating Cordova project for the iOS platform:
+		
+			Path: platforms/ios
+			Package: com.ionicframework.scotchtodo808783
+		
+			Name: scotch-todo
+		
+		iOS project created with cordova-ios@4.3.1
+		
+		Error: Source path does not exist: resources/ios/icon/icon-40@3x.png
+	-Apparently you need iosdk
+	-http://stackoverflow.com/questions/1056426/iphone-app-development-on-ubuntu
+	
+	
+Ionic creates a bundle of Angular and required dependencies (angular-ui-router, angular-animate,
+angular-sanitize, etc) bundled in one file as ionic.bundle.js.
+
+Questions
+	-WHere are we getting task?
+	-Where are we getting newTaskModal?
+	-what does localStorageService.set do?
+	-Why is index with a $ in index.html?
+		<input type="checkbox" ng-model="task.completed" ng-click="completeTask($index)">
+	-Why is a script tag filled with html?

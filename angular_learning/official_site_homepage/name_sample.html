@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app>
+<!--ng-app is the root element of the angular app, it is a directive. only one per page-->
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    </head>
+
+        
+    <body>
+        <div>
+            <label>Name:</label>
+        
+            <input type="text" ng-model="yourName" placeholder="Enter a name here">
+            <!--ng mode links form and model-->
+            <hr>
+            <h1>Hello {{yourName}}!</h1>
+            <!--{{}} data binds-->
+        </div>
+
+        
+        
+    </body>
+    
+    
+</html>

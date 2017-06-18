@@ -1,0 +1,53 @@
+<!--Deep Linking
+A deep link reflects where the user is in the app, this
+is useful so users can bookmark and email links to locations
+within apps. Round trip apps get this automatically, but AJAX
+apps by their nature do not. AngularJS combines the benefits of
+deep link with desktop app-like behavior.'
+
+Form Validation
+Client-side form validation is an important part of great user experience.
+AngularJS lets you declare the validation rules of the form without having
+to write JavaScript code. Write less code, go have beer sooner.
+
+
+Server Communication
+AngularJS provides built-in services on top of XHR as well as various other
+backends using third party libraries. Promises further simplify your code by
+handling asynchronous return of data. In this example, we use the AngularFire
+library to wire up a Firebase backend to a simple Angular app.-->
+
+
+<!DOCTYPE HTML>
+<html ng-app="project">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <!--loads angular-->
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.min.js"></script>
+        <!--loads angular js resource module-->
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
+        <!--load angularjs route-->
+        
+        <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+        <!--loads firebase javascript SDK-->
+        
+        <script src="https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js"></script>
+        <!--angularbindings for firebase-->
+        
+        <script src="project.js"></script>
+        <!--contains controllers-->
+        
+        <script src="project-list.js"></script>
+        
+    </head>
+        
+    <body>
+        <h2>JavaScript Projects</h2>
+        
+        <div ng-view></div>
+        <!--loads views-->
+    </body>
+        
+</html>

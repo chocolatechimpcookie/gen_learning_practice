@@ -1,0 +1,10 @@
+https://scotch.io/tutorials/create-your-first-mobile-app-with-angularjs-and-ionic
+
+
+Step 1: Installing
+	Bugs:
+
+		npm WARN install Couldn't install optional dependency: EACCES: permission denied, mkdir '/home/cina/.npm/spdx-expression-parse/1.0.4/package'
+		npm WARN deprecated minimatch@0.2.14: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+		npm WARN deprecated minimatch@0.3.0: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+
