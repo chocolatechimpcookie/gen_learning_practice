@@ -1,0 +1,128 @@
+
+Link:
+https://scotch.io/tutorials/setting-up-a-mean-stack-single-page-application
+
+    
+Left off:
+nerdservice.js
+
+    - app
+        ----- models/
+        ---------- nerd.js <!-- the nerd model to handle CRUD -->
+    ----- routes.js
+    - config
+        ----- db.js 
+    - node_modules <!-- created by npm install -->
+    - public <!-- all frontend and angular stuff -->
+    ----- css
+    ----- js
+    ---------- controllers <!-- angular controllers -->
+    ---------- services <!-- angular services -->
+    ---------- app.js <!-- angular application -->
+    ---------- appRoutes.js <!-- angular routes -->
+    ----- img
+    ----- libs <!-- created by bower install -->
+    ----- views 
+    ---------- home.html
+    ---------- nerd.html
+    ---------- geek.html
+    ----- index.html
+    - .bowerrc <!-- tells bower where to put files (public/libs) -->
+    - bower.json <!-- tells bower which files we need -->
+    - package.json <!-- tells npm which packages we need -->
+    - server.js <!-- set up our node application -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+APPLICATION REQUIREMENTS
+
+    -Single Page Application
+    -Node.js backend with Express and MongoDB
+    -AngularJS frontend
+    -Modular Angular components (controllers, services)
+    -Good application structure so our app can grow
+
+
+
+
+also for mongo db
+    https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
+
+
+
+What is mongooose?
+    Let's face it, writing MongoDB validation, casting and business logic boilerplate
+    is a drag. That's why we wrote Mongoose.
+    
+    
+    Mongoose provides a straight-forward, schema-based solution to model your application
+    data. It includes built-in type casting, validation, query building, business
+    logic hooks and more, out of the box.
+    
+    mongoDB validation:
+    
+    casting and business logic:
+    
+    boileplate:
+    
+    built in type casting:
+    
+    validation:
+    
+    query building:
+    
+    business logic hooks:
+
+    http://mongoosejs.com/index.html
+    http://mongoosejs.com/docs/guide.html
+    
+    
+Q& A:
+    Q: What is this weird if format on routes?
+    
+    Q:"This is where you can handle your API routes. For all other routes (*),
+    we will send the user to our frontend application where Angular can handle routing
+    them from there."
+    
+
+
+
+Bower
+
+    There are plenty of reasons to use a package manager like Bower.
+    
+    If you are tired of going to find every package you want, download, and drag them to your project every time.
+    If you want a specific version of a resource across all your projects.
+    If you just want a simpler way to get all the packages you need.
+
+    .bowerrc tells bower where to put ur files
+    
+    bower.json will tell bower which packages are needed
+    
+    
+Note on return statements
+
+    It seems that if you are having a return statement that is more than
+    one line, its best to put opening bracket on the same line as the
+    the return phrase; otherwise nothing is returned
+    
+Turning HTML5 mode on makes prettier URLs:
+    https://scotch.io/tutorials/pretty-urls-in-angularjs-removing-the-hashtag
+    
+    
+Base HTML tag
+    https://www.w3schools.com/tags/tag_base.asp

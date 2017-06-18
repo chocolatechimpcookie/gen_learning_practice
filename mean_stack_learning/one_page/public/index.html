@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <!--^What does this do?   https://www.w3schools.com/tags/tag_base.asp-->
+    
+    <title>Started Node and Angular</title>
+    
+        <!-- CSS -->
+    <link rel="stylesheet" href="libs/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="css/style.css"> <!-- custom styles -->-->
+
+    <!-- JS -->
+    <script src="libs/angular1_6_2.min.js"></script>
+    <script src="libs/angular-route1_6_2.min.js"></script>
+
+    <!-- ANGULAR CUSTOM -->
+    <script src="js/controllers/MainCtrl.js"></script>
+    <script src="js/controllers/NerdCtrl.js"></script>
+    <script src="js/services/NerdService.js"></script>
+    <script src="js/appRoutes.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body ng-app="sampleApp" ng-controller="NerdController">
+    <nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">Stencil: Node and Angular</a>
+        </div>
+        
+        <!--link to our pages, angular handles this-->
+        <ul class="nav navbar-nav">
+            <li><a href="/nerds">Nerds</a></li>
+        </ul>
+    </nav>
+    
+    <!--angular dynamic content-->
+    <div ng-view></div>
+</body>
+</html>

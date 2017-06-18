@@ -1,0 +1,2 @@
+./server_linux_amd64 --www=../../frontend
+

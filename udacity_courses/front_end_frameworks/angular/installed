@@ -1,0 +1,31 @@
+Node, NPM, Bower, Grunt:
+-Yeoman: yo, grunt-cli, generator angular, generator-karma
+
+
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+sudo apt-get install -y npm
+sudo npm install -g bower
+sudo npm install -g grunt-cli
+sudo npm install -g bower yo generator-karma generator-angular
+
+To use yeoman:
+
+All of them say "Conflict package.json" with a warning, otherwise it works
+Also: "Please update to minimatch 3.02"
+
+update npm: npm install npm@latest -g
+
+or try:
+
+npm i -g npm-check-updates
+npm-check-updates -u
+npm install
+
+http://stackoverflow.com/questions/16073603/how-do-i-update-each-dependency-in-package-json-to-the-latest-version
+
+For quiz2 create a module, first clone:
+https://github.com/udacity/FEF-Quiz-Angular-Module
+Then sudo npm install, bower install
+grunt serve to run

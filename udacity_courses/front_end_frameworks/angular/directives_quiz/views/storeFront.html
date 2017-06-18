@@ -1,0 +1,45 @@
+<!--Teplate for store: name, number of brick colors, list of items in
+this.bricks with id colorlist (size, quantity and price).
+If quantity is below 10, give it lowstockclass. if its below
+5 display more is coming soon message. give each a buy
+button that will decrease the quantity by 1. return button that
+will increase quantity by 1. give element required ID or classname. -->
+
+<h1>{{store.name}}</h1>
+<h5 id="brickColors">We currently have {{store.brickColors.length}} choices.</h5>
+
+<!-- info.quantity is not an object, its a numeric value -->
+<!-- the other values are objects -->
+<!-- http://www.w3schools.com/js/js_properties.asp -->
+<ul id="colorList">
+  <li class="col-sm-3 well brick-{{size}}" ng-class="{'low-stock': info.quantity < 10}"
+  ng-repeat="(color, details) in store.bricks" class="row" id="color-{{color}}"> {{x}}
+    {{color}}
+    <ul>
+      <li ng-repeat="(size, info) in details">
+          <p> Size: {{size}}</p>
+          <p ng-class> Quantity: {{info["quantity"]}}</p>
+          <p> Price: {{info.price}}</p>
+          <p ng-if="info.quantity < 5" class="coming-soon">More on the way!</p>
+          <button class="buyButton" ng-click="store.buy(color,size)">Buy</button>
+          <button class="returnButton" ng-click="store.return(color,size)">Return</button>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<!-- service is needed -->
+
+<!--
+<div ng-repeat="(k, v) in store.bricks">
+  <h5>{{k}}</h5>
+  <div>
+    <div ng-repeat="(size, values) in store.bricks[k]">
+
+      <p>test size {{size}}</p>
+        <p ng-repeat="(price_quantity, amount) in store.bricks[k][size]">test value {{price_quantity}}</p>
+
+    </div>
+
+  </div>
+</div> -->

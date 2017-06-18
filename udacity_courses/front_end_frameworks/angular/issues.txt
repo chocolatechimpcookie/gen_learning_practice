@@ -1,0 +1,5 @@
+Legobricks quiz won't work
+
+
+
+When doing yo angular, "conflict package.json " appears

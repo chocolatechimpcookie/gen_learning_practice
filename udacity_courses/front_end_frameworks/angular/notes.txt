@@ -1,0 +1,58 @@
+Module: stores the different parts of the app (below)
+    -Template: the view
+        -directives: markers on a template
+        that tells the Angular HTML compiler
+        to attach special behavior
+        to a DOM element.
+        -Directives let you to write out logic onto HTML    
+
+    -scope bind template and controller together,
+    if anything is changed on either end is updated
+        -Data gets set initially in the controller and into the scope
+        -The template grabs from scope
+        -when expressions change in template, controller is updated
+
+    -controller: set up initial state and logic for A VIEW
+        -service is closely tied to controller
+        and lets you put view independent logic.
+        Then you can use that service in many different
+        controllers. A service can be used to fetch and
+        store a user object. Services can be injected into
+        controlllers.
+            -dependency injection
+
+    -Router: watches URL and loads the correct template
+    into the controller.
+
+
+Simpler apps can literally be in one html file
+    -You can put the model right on the HTML ng-model
+
+
+-Yeoman: auto generate angular scaffolding
+
+-There can be different modules in a single angular app, and their names would go into
+the array where the module is being declared
+
+
+-ng-include on index.html and ng-controller can put views and controllers into the index
+which aren't being determined by the router
+
+-Scope
+    -Old way was to pass scope inside a controller
+      ($scope)
+      $scope.variable = "stuff"
+    -Now, "this" is used to set variables and controller as syntax.
+    You want angular to handle scope.
+
+    Controller as : https://toddmotto.com/digging-into-angulars-controller-as-syntax/
+    Controller as lets you type in more specific syntax {{menu.color}} instead of
+    {{color}}
+
+-State
+
+-Other stuff to check out:
+    -services vs factories
+    -the application bootstrap cycle
+    -the details of two way data binding by looking at how angular digest works
+    -custom directives
