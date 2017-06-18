@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+        <script src="./libraries/jquery-2.2.4.min.js"></script>
+        <script src="./libraries/angular1_6_1.min.js"></script>
+        <script src="./libraries/angular-ui-router.min.js"></script>
+        <script src="./libraries/bootstrap.js"></script>
+        <link href="./libraries/bootstrap.min.css" rel="stylesheet" >
+        <link href="./libraries/bootstrap-theme.min.css" rel="stylesheet"></link>
+        <link href="./libraries/main.css" rel="stylesheet"></link>
+        <script src="./scripts/main.js"></script>
+    
+    
+    
+    
+    <!--centering nav items-->
+    
+<!--    <head>-->
+<!--        <style>-->
+<!--        -->
+<!--            .menu-->
+<!--            {-->
+<!--                -->
+<!--                list-style-type: none;-->
+<!--                padding:0;-->
+<!--                width:99%;-->
+<!--                margin-right:auto;-->
+<!--                margin-left:auto;-->
+<!--                text-align: center;-->
+<!--                font-family: arial;-->
+<!---->
+<!--            }-->
+<!--            -->
+<!--            -->
+<!--                -->
+<!--            .menu li-->
+<!--            {-->
+<!--                font-size: 30px;-->
+<!--                display: inline-block;-->
+<!--            }-->
+<!--            -->
+<!--            -->
+<!--            {-->
+<!--                display:block;-->
+<!--                color:white;-->
+<!--                text-decoration: none;-->
+<!--            }-->
+<!--            -->
+<!--            .menu li a  &:hover, .menu li a  &:visited, .menu li a  &:active, .menu li a  &:after-->
+<!--            {-->
+<!--                text-decoration: none;-->
+<!--                cursor: pointer;-->
+<!--            }-->
+<!--                -->
+<!--        </style>-->
+<!--    -->
+<!--    </head>-->
+<!--    <body>-->
+<!--<!--Horizontal centered menu items-->-->
+<!--        <nav class="navbar">-->
+<!--            <ul class="menu">-->
+<!--                <li> <a style="margin-right: 10px;">Item 1</a></li>-->
+<!--                <li><a style="margin-right: 10px;">Item2</a></li>-->
+<!--            </ul>-->
+<!--        </nav>-->
+<!--    </body>-->
+<!--    -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!--
+    Explain use of float here
+    --------------------------->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+</html>
+    
