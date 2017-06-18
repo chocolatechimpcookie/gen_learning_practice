@@ -1,6 +1,6 @@
 # Welcome
 
-##### This repository is my playground for learning basics for various languages.
+### This repository is my playground for learning basics for various languages.
 
 **Languages/Libraries/Frameworks Included:**
   * C
