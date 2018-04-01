@@ -1,23 +1,25 @@
+# Angular 2+
+
 https://angular.io/guide/quickstart
 
-# To Install
+## To Install
 
 `npm install -g @angular/cli`
 
 `ng new my-app`
 
-# Serve the app
+## Serve the app
 
 `ng serve --open`
 
 
-# guide
+## guide
 README in generated project has useful info for cli
 
 
-# Source
+## Source
 App lives in `src` folder
 
 
-# Hierarchy
+## Hierarchy
 * AppComponent is the root of page Hierarchy
