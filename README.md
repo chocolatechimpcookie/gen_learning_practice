@@ -4,7 +4,8 @@
 
 **Languages/Libraries/Frameworks Included:**
   * C
-  * angular
+  * angularjs (1.x)
+  * angular (2>=)
   * Ionic
   * Useful code snippets for web
   * Udacity courses
