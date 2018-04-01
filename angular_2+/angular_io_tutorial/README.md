@@ -10,10 +10,10 @@ https://angular.io/guide/quickstart
 
 ## Serve the app
 
-`ng serve --open`
+* `ng serve --open`
+** Auto updates changes
 
-
-## guide
+## Guide
 README in generated project has useful info for cli
 
 
