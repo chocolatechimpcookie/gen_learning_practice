@@ -8,6 +8,7 @@ namespace ACM.BL
 {
     public class Customer
     {
+      public static int InstanceCount { get; set; }
       private string _lastName;
       //coding convention
       public string LastName
