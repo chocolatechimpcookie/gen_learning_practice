@@ -8,29 +8,34 @@ namespace ACM.BL
 {
     public class Customer
     {
-      public static int InstanceCount { get; set; }
-      private string _lastName;
-      //coding convention
-      public string LastName
-      {
+		public int CustomerId
+		{
+			get;
+			private set;
+		}
+        public static int InstanceCount { get; set; }
+        private string _lastName;
+        //coding convention
+        public string LastName
+        {
         get
         {
-          return _lastName;
+            return _lastName;
         }
         set
         {
-          _lastName = value;
+            _lastName = value;
         }
-      }
+        }
 
 
-      public string FirstName {get; set;}
-      public string EmailAddress {get; set;}
+        public string FirstName {get; set;}
+        public string EmailAddress {get; set;}
 
-      public int MyProperty {get; private set;}
+        public int MyProperty {get; private set;}
 
-      public string FullName
-      {
+        public string FullName
+        {
         get
         {
             string fullName = LastName;
@@ -46,6 +51,46 @@ namespace ACM.BL
 
             return fullName;
         }
-      }
+        }
+
+		//constr
+
+		public Customer(int customerId)
+		{
+			this.CustomerId = customerId;
+		}
+
+
+
+        //methods
+        
+        
+        public Customer Retrieve(int customerId)
+        {
+            return new Customer();
+        }
+
+        public List<Customer> Retrieve()
+        {
+            return new List<Customer>();
+        }
+        
+        public bool Save()
+        {
+            return true;
+        }
+
+        public bool Validate()
+        {
+            var isValid = true;
+
+            if (string.IsNullOrWhiteSpace(LastName))
+                isValid = false;
+
+            if (string.IsNullOrWhiteSpace(EmailAddress))
+                isValid = false;
+
+            return isValid;
+        }
     }
 }

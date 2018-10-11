@@ -8,3 +8,13 @@ C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\o
 C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\oop_funda\3-oop-fundamentals-csharp-m3-building-classes-exercise-files\ACM\ACM.BLTest\obj\Debug\ACM.BLTest.csproj.CopyComplete
 C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\oop_funda\3-oop-fundamentals-csharp-m3-building-classes-exercise-files\ACM\ACM.BLTest\obj\Debug\ACM.BLTest.dll
 C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\oop_funda\3-oop-fundamentals-csharp-m3-building-classes-exercise-files\ACM\ACM.BLTest\obj\Debug\ACM.BLTest.pdb
+C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\oop_funda\ACM\ACM.BLTest\bin\Debug\ACM.BLTest.dll
+C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\oop_funda\ACM\ACM.BLTest\bin\Debug\ACM.BLTest.pdb
+C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\oop_funda\ACM\ACM.BLTest\bin\Debug\ACM.BL.dll
+C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\oop_funda\ACM\ACM.BLTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\oop_funda\ACM\ACM.BLTest\bin\Debug\ACM.BL.pdb
+C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\oop_funda\ACM\ACM.BLTest\obj\Debug\ACM.BLTest.csprojAssemblyReference.cache
+C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\oop_funda\ACM\ACM.BLTest\obj\Debug\ACM.BLTest.csproj.CoreCompileInputs.cache
+C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\oop_funda\ACM\ACM.BLTest\obj\Debug\ACM.BLTest.csproj.CopyComplete
+C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\oop_funda\ACM\ACM.BLTest\obj\Debug\ACM.BLTest.dll
+C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\oop_funda\ACM\ACM.BLTest\obj\Debug\ACM.BLTest.pdb
