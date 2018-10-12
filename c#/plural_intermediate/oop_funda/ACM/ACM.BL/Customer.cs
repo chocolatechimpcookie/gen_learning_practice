@@ -36,30 +36,36 @@ namespace ACM.BL
 
         public string FullName
         {
-        get
-        {
-            string fullName = LastName;
+			get
+			{
+				string fullName = LastName;
             
-            if (!string.IsNullOrWhiteSpace(FirstName))
-            {
-                if (!string.IsNullOrWhiteSpace(fullName))
-                {
-                    fullName += ", ";
-                }
-                fullName += FirstName;
-            }
+				if (!string.IsNullOrWhiteSpace(FirstName))
+				{
+					if (!string.IsNullOrWhiteSpace(fullName))
+					{
+						fullName += ", ";
+					}
+					fullName += FirstName;
+				}
 
-            return fullName;
-        }
+				return fullName;
+			}
         }
 
 		//constr
+
+		public Customer()
+		{
+
+		}
 
 		public Customer(int customerId)
 		{
 			this.CustomerId = customerId;
 		}
 
+		// so the user can create the object with and without customerId
 
 
         //methods
