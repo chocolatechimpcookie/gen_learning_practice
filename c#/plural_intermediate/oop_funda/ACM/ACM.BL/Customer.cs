@@ -39,7 +39,7 @@ namespace ACM.BL
 			get
 			{
 				string fullName = LastName;
-            
+
 				if (!string.IsNullOrWhiteSpace(FirstName))
 				{
 					if (!string.IsNullOrWhiteSpace(fullName))
@@ -55,48 +55,35 @@ namespace ACM.BL
 
 		//constr
 
-		public Customer()
-		{
+  		public Customer()
+  		{
 
-		}
+  		}
 
-		public Customer(int customerId)
-		{
-			this.CustomerId = customerId;
-		}
+  		public Customer(int customerId)
+  		{
+  			this.CustomerId = customerId;
+  		}
 
 		// so the user can create the object with and without customerId
 
 
         //methods
-        
-        
-        public Customer Retrieve(int customerId)
-        {
-            return new Customer();
-        }
 
-        public List<Customer> Retrieve()
-        {
-            return new List<Customer>();
-        }
-        
-        public bool Save()
-        {
-            return true;
-        }
 
-        public bool Validate()
-        {
-            var isValid = true;
 
-            if (string.IsNullOrWhiteSpace(LastName))
-                isValid = false;
 
-            if (string.IsNullOrWhiteSpace(EmailAddress))
-                isValid = false;
+      public bool Validate()
+      {
+          var isValid = true;
 
-            return isValid;
-        }
+          if (string.IsNullOrWhiteSpace(LastName))
+              isValid = false;
+
+          if (string.IsNullOrWhiteSpace(EmailAddress))
+              isValid = false;
+
+          return isValid;
+      }
     }
 }
