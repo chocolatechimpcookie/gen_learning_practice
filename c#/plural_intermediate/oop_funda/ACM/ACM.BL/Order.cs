@@ -9,11 +9,20 @@ namespace ACM.BL
 	class Order
 	{
 		//properties
+
+		public int CustomerId {get; set;}
+		public int ShippingAddressId {get; set;}
+
+
 		public DateTimeOffset? OrderDate { get; set;}
 
 		// this type helps you compare dates between different time zones
 
 		public int OrderId { get; private set;}
+
+		public List<OrderItem> orderItems {get; set;}
+
+
 
 		//constructor
 

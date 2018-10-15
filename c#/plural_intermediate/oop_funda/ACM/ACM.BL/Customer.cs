@@ -8,64 +8,71 @@ namespace ACM.BL
 {
     public class Customer
     {
-		public int CustomerId
-		{
-			get;
-			private set;
-		}
-        public static int InstanceCount { get; set; }
-        private string _lastName;
-        //coding convention
-        public string LastName
-        {
-        get
-        {
-            return _lastName;
-        }
-        set
-        {
-            _lastName = value;
-        }
-        }
+  		public int CustomerId
+  		{
+  			get;
+  			private set;
+  		}
 
 
-        public string FirstName {get; set;}
-        public string EmailAddress {get; set;}
+      public List<Address> AddressList {get; set;}
 
-        public int MyProperty {get; private set;}
+      public static int InstanceCount { get; set; }
+      private string _lastName;
+      //coding convention
+      public string LastName
+      {
+      get
+      {
+          return _lastName;
+      }
+      set
+      {
+          _lastName = value;
+      }
+      }
 
-        public string FullName
-        {
-			get
-			{
-				string fullName = LastName;
 
-				if (!string.IsNullOrWhiteSpace(FirstName))
-				{
-					if (!string.IsNullOrWhiteSpace(fullName))
-					{
-						fullName += ", ";
-					}
-					fullName += FirstName;
-				}
+      public string FirstName {get; set;}
+      public string EmailAddress {get; set;}
 
-				return fullName;
-			}
-        }
+      public int MyProperty {get; private set;}
 
-		//constr
+      public string FullName
+      {
+  		get
+  		{
+    			string fullName = LastName;
+
+    			if (!string.IsNullOrWhiteSpace(FirstName))
+    			{
+    				if (!string.IsNullOrWhiteSpace(fullName))
+    				{
+    					fullName += ", ";
+    				}
+    				fullName += FirstName;
+    			}
+
+    			return fullName;
+    		}
+      }
+
+  	//constr
 
   		public Customer()
   		{
-
+        //to prevent repeated code, constructor chaining
   		}
 
   		public Customer(int customerId)
   		{
   			this.CustomerId = customerId;
+        AddressList = new List<Address>();
+        //to prevent null value exception
+        // default value of a list is null
   		}
 
-		// so the user can create the object with and without customerId
+  	// so the user can create the object with and without customerId
 
 
         //methods
