@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-    public class Customer
+      public class Customer
     {
   		public int CustomerId
   		{
@@ -15,12 +15,14 @@ namespace ACM.BL
   		}
 
 
-      public List<Address> AddressList {get; set;}
+        public List<Address> AddressList {get; set;}
 
-      public static int InstanceCount { get; set; }
-      private string _lastName;
+	    public int CustomerType { get; set;}
+
+        public static int InstanceCount { get; set; }
+        private string _lastName;
       //coding convention
-      public string LastName
+        public string LastName
       {
       get
       {
@@ -33,12 +35,12 @@ namespace ACM.BL
       }
 
 
-      public string FirstName {get; set;}
-      public string EmailAddress {get; set;}
+        public string FirstName {get; set;}
+        public string EmailAddress {get; set;}
 
-      public int MyProperty {get; private set;}
+        public int MyProperty {get; private set;}
 
-      public string FullName
+        public string FullName
       {
   		get
   		{
@@ -67,7 +69,7 @@ namespace ACM.BL
   		public Customer(int customerId)
   		{
   			this.CustomerId = customerId;
-        AddressList = new List<Address>();
+			AddressList = new List<Address>();
         //to prevent null value exception
         // default value of a list is null
   		}
@@ -80,7 +82,7 @@ namespace ACM.BL
 
 
 
-      public bool Validate()
+        public bool Validate()
       {
           var isValid = true;
 

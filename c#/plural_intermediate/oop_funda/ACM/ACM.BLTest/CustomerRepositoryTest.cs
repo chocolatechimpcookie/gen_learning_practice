@@ -2,16 +2,17 @@ using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ACM.BL;
 using System.Diagnostics;
+using System.Collections.Generic;
 
 namespace ACM.BLTest
 {
   [TestClass]
-  public class CustomerRepositoryTest
+    public class CustomerRepositoryTest
   {
 
 
     [TestMethod]
-    public void RetrieveExistingWithAddress()
+      public void RetrieveExistingWithAddress()
     {
       //arrange
       var customerRepository = new CustomerRepository();
@@ -30,7 +31,7 @@ namespace ACM.BLTest
             City = "Hobbiton",
             State = "Shire",
             Country = "Middle Earth",
-            PostalCode = "144"
+              postalCode = "144"
           },
           new Address()
           {
@@ -39,7 +40,7 @@ namespace ACM.BLTest
             City = "Bywater",
             State = "Shire",
             Country = "Middle Earth",
-            PostalCode = "146"
+              postalCode = "146"
           }
         }
       };
@@ -69,10 +70,10 @@ namespace ACM.BLTest
     }
 
     [TestMethod]
-    public void RetrieveExisting()
+      public void RetrieveExisting()
     {
       //Arrange
-      var customerRepository = new CustomerRespository();
+      var customerRepository = new CustomerRepository();
       var expected = new Customer(1)
       {
         EmailAddress = "fbaggins@hobbiton.me",
@@ -90,6 +91,7 @@ namespace ACM.BLTest
       Assert.AreEqual(expected.EmailAddress, actual.EmailAddress);
       Assert.AreEqual(expected.FirstName, actual.FirstName);
       Assert.AreEqual(expected.LastName, actual.LastName);
+
 
     }
 

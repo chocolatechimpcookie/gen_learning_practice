@@ -6,30 +6,26 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-	class Address
+	public class Address
 	{
-		//properties
-		public int AddressId { get; private set;}
-		public int AddressType { get; set;}
-		public string StreetLine1 { get; set;}
-		public string StreetLine2 { get; set;}
-		public string City { get; set;}
-		public string State { get; set;}
-		public string PostalCode { get; set;}
-		public string Country { get; set;}
-		//constr
-
 		public Address()
 		{
 
 		}
 
-		public Address(int AddressId)
+		public Address(int addressId)
 		{
-			this.AddressId = AddressId;
+			this.AddressId = addressId;
 		}
 
+		public int AddressId { get; private set; }
+		public int AddressType { get; set; }
+		public string StreetLine1 { get; set; }
+		public string StreetLine2 { get; set; }
+		public string City { get; set; }
+		public string State { get; set; }
+		public string PostalCode { get; set; }
+		public string Country { get; set; }
 
-		//methods
 	}
 }

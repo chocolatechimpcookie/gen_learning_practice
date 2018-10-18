@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-  public class ProductRepository
+    public class ProductRepository
   {
 
     //why is this not erroring in PL's video? Its not using the parameter at all!
@@ -15,14 +15,14 @@ namespace ACM.BL
 		public Product Retrieve (int productId)
 		{
 
-      Product product = new Product(productId);
+        product product = new Product(productId);
 
       if (productId == 2)
       {
-        product.ProductName = "Sunflowers";
-        product.ProductDescription = "Assorted Size";
+          product.ProductName = "Sunflowers";
+          product.ProductDescription = "Assorted Size";
         // this might be off
-        product.CurrentPrice = 15.96M;
+          product.CurrentPrice = 15.96M;
       }
 
       return new Product();

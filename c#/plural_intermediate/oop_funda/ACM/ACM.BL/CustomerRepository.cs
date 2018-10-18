@@ -12,7 +12,7 @@ namespace ACM.BL
 
 		public CustomerRepository()
 		{
-			addressRepository = new AddressRepository;
+			addressRepository = new AddressRepository();
 		}
 
 
@@ -23,7 +23,7 @@ namespace ACM.BL
 				customer.AddressList = addressRepository.
 					RetrieveByCustomerId(customerId).ToList();
 
-				if (CustomerId == 1)
+				if (customerId == 1)
 				{
 					customer.EmailAddress = "fbaggins@hobbiton.me";
 					customer.FirstName = "Frodo";

@@ -6,10 +6,10 @@ using System.Diagnostics;
 namespace ACM.BLTest
 {
     [TestClass]
-    public class CustomerTest
+      public class CustomerTest
     {
         [TestMethod]
-        public void FullNameTestValid()
+          public void FullNameTestValid()
         {
           //---Arrange
             Customer customer = new Customer();
@@ -25,7 +25,7 @@ namespace ACM.BLTest
         }
 
         [TestMethod]
-        public void FullNameFirstNameEmpty()
+          public void FullNameFirstNameEmpty()
         {
           Customer customer = new Customer();
           customer.LastName = "Baggins";
@@ -37,7 +37,7 @@ namespace ACM.BLTest
         }
 
         [TestMethod]
-        public void FullNameLastNameEmpty()
+          public void FullNameLastNameEmpty()
         {
           Customer customer = new Customer();
           customer.FirstName = "Bilbo";
@@ -49,7 +49,7 @@ namespace ACM.BLTest
         }
 
         [TestMethod]
-        public void StaticTest()
+          public void StaticTest()
         {
             //Arrange
             var c1 = new Customer();
@@ -70,7 +70,7 @@ namespace ACM.BLTest
 
 
         [TestMethod]
-        public void ValidateValid()
+          public void ValidateValid()
         {
             //Arrange
             var customer = new Customer();
@@ -88,7 +88,7 @@ namespace ACM.BLTest
         }
 
         [TestMethod]
-        public void ValidateMissingLastName()
+          public void ValidateMissingLastName()
         {
             var customer = new Customer();
             customer.EmailAddress = "fbagins@gmail.com";
