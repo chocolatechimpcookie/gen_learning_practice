@@ -31,7 +31,7 @@ namespace ACM.BLTest
             City = "Hobbiton",
             State = "Shire",
             Country = "Middle Earth",
-              postalCode = "144"
+            PostalCode = "144"
           },
           new Address()
           {
@@ -40,7 +40,7 @@ namespace ACM.BLTest
             City = "Bywater",
             State = "Shire",
             Country = "Middle Earth",
-              postalCode = "146"
+            PostalCode = "146"
           }
         }
       };

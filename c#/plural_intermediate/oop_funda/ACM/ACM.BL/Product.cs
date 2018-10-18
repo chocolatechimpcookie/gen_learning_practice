@@ -6,25 +6,18 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-	class Product
+	public class Product : EntityBase
 	{
 
-
-
-
 		public Decimal? CurrentPrice {get; set;}
-
 		//nullable type, so code can distinguish between Not Set and Zero
 
 		public int ProductId { get; private set;}
-
 		// this is being set by the constructor, but it cannot be modified otherwise outside of this class
 
 		public string ProductDescription { get; set;}
 
 		public string ProductName { get; set;}
-
-
 
 
 		public Product()
@@ -38,15 +31,9 @@ namespace ACM.BL
 		}
 
 
-
-
-
-
-
-
 		//saves defined product
 
-		public bool Validate()
+		public override bool Validate()
 		{
 			var isValid = true;
 
@@ -54,10 +41,15 @@ namespace ACM.BL
 			if (CurrentPrice == null) isValid = false;
 
 			return isValid;
-
-
 		}
 
+
+		public override string ToString()
+		{
+			return ProductName;
+		}
+
+		// anytime we access toString, we'll get toString
 
 	}
 }

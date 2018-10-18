@@ -99,20 +99,6 @@ namespace ACM.BLTest
             Assert.AreEqual(expected, actual);
         }
 
-		[TestMethod]
-		public void TestRetrieve()
-		{ 
-			var customer = new Customer(50);
-			var nopass = customer.Retrieve();
-			var passed = customer.Retrieve(50);
-			Trace.Listeners.Add(new TextWriterTraceListener(Console.Out)); 
-			Trace.WriteLine(nopass);
-			Trace.WriteLine(passed);
-
-
-
-
-		}
 
 
 	}

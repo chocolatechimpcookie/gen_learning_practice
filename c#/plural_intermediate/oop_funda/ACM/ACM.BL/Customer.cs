@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-      public class Customer
+      public class Customer 
     {
   		public int CustomerId
   		{
@@ -23,16 +23,16 @@ namespace ACM.BL
         private string _lastName;
       //coding convention
         public string LastName
-      {
-      get
-      {
-          return _lastName;
-      }
-      set
-      {
-          _lastName = value;
-      }
-      }
+		{
+			get
+			{
+				return _lastName;
+			}
+			set
+			{
+				_lastName = value;
+			}
+		}
 
 
         public string FirstName {get; set;}
@@ -62,8 +62,10 @@ namespace ACM.BL
   	//constr
 
   		public Customer()
+			:this(0)
   		{
         //to prevent repeated code, constructor chaining
+			
   		}
 
   		public Customer(int customerId)
