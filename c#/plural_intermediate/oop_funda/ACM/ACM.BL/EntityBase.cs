@@ -24,13 +24,10 @@ namespace ACM.BL
         {
             get
             {
-                return Validate;
+                return Validate();
             }
         }
 
-        public abstract bool Validate()
-        {
-
-        }
+        public abstract bool Validate();
     }
 }

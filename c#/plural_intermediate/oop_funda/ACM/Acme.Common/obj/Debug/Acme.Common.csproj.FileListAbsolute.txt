@@ -1,0 +1,6 @@
+C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\oop_funda\ACM\Acme.Common\bin\Debug\Acme.Common.dll
+C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\oop_funda\ACM\Acme.Common\bin\Debug\Acme.Common.pdb
+C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\oop_funda\ACM\Acme.Common\obj\Debug\Acme.Common.csprojAssemblyReference.cache
+C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\oop_funda\ACM\Acme.Common\obj\Debug\Acme.Common.csproj.CoreCompileInputs.cache
+C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\oop_funda\ACM\Acme.Common\obj\Debug\Acme.Common.dll
+C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\oop_funda\ACM\Acme.Common\obj\Debug\Acme.Common.pdb

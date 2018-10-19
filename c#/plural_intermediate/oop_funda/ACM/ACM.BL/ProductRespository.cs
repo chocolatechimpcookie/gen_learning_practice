@@ -31,9 +31,20 @@ namespace ACM.BL
 		// this uses the constructor, just one of them though
 		/// how does this work tho
 
-		public bool Save()
+		public bool Save(Product product)
 		{
-			return true;
+			var success = true;
+			
+			if(product.HasChanges && product.IsValid)
+			{
+				//call an insert stored procedure
+			}
+			else
+			{
+				//call an update stored procedure
+
+			}
+			return success;
 		}
 
 
