@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Acme.Common;
 
 namespace ACM.BL
 {
-      public class Customer 
+    public class Customer : EntityBase, ILoggable
     {
   		public int CustomerId
   		{
@@ -84,17 +85,26 @@ namespace ACM.BL
 
 
 
-        public bool Validate()
-      {
-          var isValid = true;
+		public override bool Validate()
+		{
+			var isValid = true;
 
-          if (string.IsNullOrWhiteSpace(LastName))
-              isValid = false;
+			if (string.IsNullOrWhiteSpace(LastName))
+				isValid = false;
 
-          if (string.IsNullOrWhiteSpace(EmailAddress))
-              isValid = false;
+			if (string.IsNullOrWhiteSpace(EmailAddress))
+				isValid = false;
 
-          return isValid;
-      }
+			return isValid;
+		}
+
+		public string Log()
+		{
+			var logString = this.CustomerId + ": " + 
+							this.FullName + " " + 
+							"Email: " + this.EmailAddress + " " + 
+							"Status: " + this.EntityState.ToString();
+			return logString;
+		}
     }
 }

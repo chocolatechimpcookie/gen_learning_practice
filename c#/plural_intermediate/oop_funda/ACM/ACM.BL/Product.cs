@@ -7,7 +7,7 @@ using Acme.Common;
 
 namespace ACM.BL
 {
-	public class Product : EntityBase
+	public class Product : EntityBase, ILoggable 
 	{
 
 		public Decimal? CurrentPrice {get; set;}
@@ -24,7 +24,8 @@ namespace ACM.BL
 		{
 			get
 			{
-				return StringHandler.InsertSpaces(_ProductName);
+				//return StringHandler.InsertSpaces(_ProductName);
+				return _ProductName.InsertSpaces();
 			}
 			set
 			{
@@ -63,7 +64,14 @@ namespace ACM.BL
 
 		// anytime we access toString, we'll get toString
 
-
+		public string Log()
+		{
+			var logString = this.ProductId + ": " +
+							this.ProductName + " " +
+							"Detail: " + this.ProductDescription + " " +
+							"Status: " + this.EntityState.ToString();
+			return logString;
+		}
 
 	}
 }

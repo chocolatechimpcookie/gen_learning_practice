@@ -4,8 +4,5 @@ C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\o
 C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\oop_funda\3-oop-fundamentals-csharp-m3-building-classes-exercise-files\ACM\ACM.BL\obj\Debug\ACM.BL.dll
 C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\oop_funda\3-oop-fundamentals-csharp-m3-building-classes-exercise-files\ACM\ACM.BL\obj\Debug\ACM.BL.pdb
 C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\oop_funda\3-oop-fundamentals-csharp-m3-building-classes-exercise-files\ACM\ACM.BL\obj\Debug\ACM.BL.csprojAssemblyReference.cache
-C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\oop_funda\ACM\ACM.BL\bin\Debug\ACM.BL.dll
-C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\oop_funda\ACM\ACM.BL\bin\Debug\ACM.BL.pdb
+C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\oop_funda\ACM\ACM.BL\obj\Debug\ACM.BL.csprojAssemblyReference.cache
 C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\oop_funda\ACM\ACM.BL\obj\Debug\ACM.BL.csproj.CoreCompileInputs.cache
-C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\oop_funda\ACM\ACM.BL\obj\Debug\ACM.BL.dll
-C:\Users\amemar\Desktop\git_stuff\gen_learning_practice\c#\plural_intermediate\oop_funda\ACM\ACM.BL\obj\Debug\ACM.BL.pdb
