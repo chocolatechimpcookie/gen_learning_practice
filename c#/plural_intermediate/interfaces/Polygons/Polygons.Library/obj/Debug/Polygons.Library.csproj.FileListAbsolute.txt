@@ -1,0 +1,6 @@
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\Polygons\Polygons.Library\bin\Debug\Polygons.Library.dll
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\Polygons\Polygons.Library\bin\Debug\Polygons.Library.pdb
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\Polygons\Polygons.Library\obj\Debug\Polygons.Library.csprojAssemblyReference.cache
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\Polygons\Polygons.Library\obj\Debug\Polygons.Library.csproj.CoreCompileInputs.cache
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\Polygons\Polygons.Library\obj\Debug\Polygons.Library.dll
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\Polygons\Polygons.Library\obj\Debug\Polygons.Library.pdb
