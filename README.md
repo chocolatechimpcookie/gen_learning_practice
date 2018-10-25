@@ -1,4 +1,4 @@
-# Welcome
+# <span style="blue">Welcome</span>
 
 ### This repository is my playground for learning basics for various languages.
 
