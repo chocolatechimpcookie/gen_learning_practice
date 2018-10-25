@@ -4,6 +4,7 @@
 
 **Languages/Libraries/Frameworks Included:**
   * C
+  * C#
   * angularjs (1.x)
   * angular (2>=)
   * Ionic
