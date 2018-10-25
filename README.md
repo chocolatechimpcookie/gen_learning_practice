@@ -14,6 +14,3 @@
 **Content Included**
   * Tutorials
   * Following along projects
-
-**What is not included**
-  * Projects with original code
