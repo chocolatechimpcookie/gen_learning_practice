@@ -1,0 +1,12 @@
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\DynamicLoading\PersonRepository.Fake\bin\Debug\netstandard2.0\PersonRepository.Fake.deps.json
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\DynamicLoading\PersonRepository.Fake\bin\Debug\netstandard2.0\PersonRepository.Fake.dll
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\DynamicLoading\PersonRepository.Fake\bin\Debug\netstandard2.0\PersonRepository.Fake.pdb
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\DynamicLoading\PersonRepository.Fake\bin\Debug\netstandard2.0\PersonRepository.Interface.dll
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\DynamicLoading\PersonRepository.Fake\bin\Debug\netstandard2.0\PersonRepository.Interface.pdb
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\DynamicLoading\PersonRepository.Fake\obj\Debug\netstandard2.0\PersonRepository.Fake.csprojAssemblyReference.cache
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\DynamicLoading\PersonRepository.Fake\obj\Debug\netstandard2.0\PersonRepository.Fake.csproj.CoreCompileInputs.cache
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\DynamicLoading\PersonRepository.Fake\obj\Debug\netstandard2.0\PersonRepository.Fake.AssemblyInfoInputs.cache
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\DynamicLoading\PersonRepository.Fake\obj\Debug\netstandard2.0\PersonRepository.Fake.AssemblyInfo.cs
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\DynamicLoading\PersonRepository.Fake\obj\Debug\netstandard2.0\PersonRepository.Fake.csproj.CopyComplete
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\DynamicLoading\PersonRepository.Fake\obj\Debug\netstandard2.0\PersonRepository.Fake.dll
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\DynamicLoading\PersonRepository.Fake\obj\Debug\netstandard2.0\PersonRepository.Fake.pdb

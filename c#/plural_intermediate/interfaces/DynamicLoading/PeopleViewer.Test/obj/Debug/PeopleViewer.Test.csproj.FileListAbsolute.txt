@@ -1,0 +1,14 @@
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\DynamicLoading\PeopleViewer.Test\bin\Debug\PeopleViewer.Test.dll.config
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\DynamicLoading\PeopleViewer.Test\bin\Debug\PeopleViewer.Test.dll
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\DynamicLoading\PeopleViewer.Test\bin\Debug\PeopleViewer.Test.pdb
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\DynamicLoading\PeopleViewer.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\DynamicLoading\PeopleViewer.Test\bin\Debug\PeopleViewer.exe
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\DynamicLoading\PeopleViewer.Test\bin\Debug\PersonRepository.Interface.dll
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\DynamicLoading\PeopleViewer.Test\bin\Debug\PeopleViewer.pdb
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\DynamicLoading\PeopleViewer.Test\bin\Debug\PeopleViewer.exe.config
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\DynamicLoading\PeopleViewer.Test\bin\Debug\PersonRepository.Interface.pdb
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\DynamicLoading\PeopleViewer.Test\obj\Debug\PeopleViewer.Test.csprojAssemblyReference.cache
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\DynamicLoading\PeopleViewer.Test\obj\Debug\PeopleViewer.Test.csproj.CoreCompileInputs.cache
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\DynamicLoading\PeopleViewer.Test\obj\Debug\PeopleViewer.Test.csproj.CopyComplete
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\DynamicLoading\PeopleViewer.Test\obj\Debug\PeopleViewer.Test.dll
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\DynamicLoading\PeopleViewer.Test\obj\Debug\PeopleViewer.Test.pdb

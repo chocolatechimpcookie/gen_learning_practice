@@ -1,0 +1,6 @@
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\FutureProofing\PersonLibrary\bin\Debug\PersonLibrary.dll
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\FutureProofing\PersonLibrary\bin\Debug\PersonLibrary.pdb
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\FutureProofing\PersonLibrary\obj\Debug\PersonLibrary.csprojAssemblyReference.cache
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\FutureProofing\PersonLibrary\obj\Debug\PersonLibrary.csproj.CoreCompileInputs.cache
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\FutureProofing\PersonLibrary\obj\Debug\PersonLibrary.dll
+C:\Users\amemar\Desktop\gen_learning_practice\c#\plural_intermediate\interfaces\FutureProofing\PersonLibrary\obj\Debug\PersonLibrary.pdb
