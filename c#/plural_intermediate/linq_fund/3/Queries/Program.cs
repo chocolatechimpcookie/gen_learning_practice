@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Queries
 {
@@ -13,6 +15,20 @@ namespace Queries
                 new Movie { Title ="Casablanca", Rating=8.5f, Year = 1942 },
                 new Movie { Title = "The King's Speech", Rating = 8.0f, Year = 2010 }
             };
+
+			var query = movies.Where(mov => mov.Year > 2000);
+			//var query = movies.Filter(mov => mov.Year > 2000);
+			//using MyLinq Filter
+
+
+			foreach (var movie in query)
+            {
+                Console.WriteLine(movie.Title);
+            }
+
+			Console.ReadLine();
+			//to keep console open
+
         }
     }
 }

@@ -4,18 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Features.Linq
+namespace Features
 {
     public static class MyLinq
     {
-        public static int Count<T>(this IEnumerable<T> sequence)
+        public static int Count<T>(IEnumerable<T> sequence)
         {
-            var count = 0;
+            int count = 0;
             foreach (var item in sequence)
             {
                 count += 1;
             }
             return count;
         }
+
     }
 }
