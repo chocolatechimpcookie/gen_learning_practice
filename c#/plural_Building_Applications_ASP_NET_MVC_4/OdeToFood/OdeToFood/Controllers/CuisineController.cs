@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OdeToFood.Filters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,7 +9,10 @@ namespace OdeToFood.Controllers
 {
     public class CuisineController : Controller
     {
-        [Authorize]
+        //you can use this attribute to control logic relating to specific userss
+        // you can also put this attribute at the class level
+        //[Authorize]
+        [Log]
         public ActionResult Search(string name = "french")
         {
             var message = Server.HtmlEncode(name);
