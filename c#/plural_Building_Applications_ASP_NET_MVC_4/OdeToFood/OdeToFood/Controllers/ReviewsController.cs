@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OdeToFood.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,7 +14,12 @@ namespace OdeToFood.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            var model =
+                from r in _reviews
+                orderby r.Country
+                select r;
+
+            return View(model);
         }
 
         //
@@ -119,8 +125,11 @@ namespace OdeToFood.Controllers
                 Rating = 10
             },
             new RestaurantReview {
-                Id = 2,
-                Name =
+                Id = 3,
+                Name = "The House of Elliot",
+                City = "Ghent",
+                Country = "Belgium",
+                Rating = 10
             }
 
         };
