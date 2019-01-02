@@ -12,3 +12,17 @@ C:\Users\labtab\Desktop\gen_learning_practice\c#\plural_aspnetcore_fundamentals\
 C:\Users\labtab\Desktop\gen_learning_practice\c#\plural_aspnetcore_fundamentals\OdeToFood2\OdeToFood2\obj\Debug\netcoreapp2.2\OdeToFood2.RazorTargetAssemblyInfo.cache
 C:\Users\labtab\Desktop\gen_learning_practice\c#\plural_aspnetcore_fundamentals\OdeToFood2\OdeToFood2\obj\Debug\netcoreapp2.2\OdeToFood2.dll
 C:\Users\labtab\Desktop\gen_learning_practice\c#\plural_aspnetcore_fundamentals\OdeToFood2\OdeToFood2\obj\Debug\netcoreapp2.2\OdeToFood2.pdb
+C:\Users\labtab\Desktop\shared\gen_learning_practice\c#\plural_aspnetcore_fundamentals\OdeToFood2\OdeToFood2\bin\Debug\netcoreapp2.2\OdeToFood2.deps.json
+C:\Users\labtab\Desktop\shared\gen_learning_practice\c#\plural_aspnetcore_fundamentals\OdeToFood2\OdeToFood2\bin\Debug\netcoreapp2.2\OdeToFood2.runtimeconfig.json
+C:\Users\labtab\Desktop\shared\gen_learning_practice\c#\plural_aspnetcore_fundamentals\OdeToFood2\OdeToFood2\bin\Debug\netcoreapp2.2\OdeToFood2.runtimeconfig.dev.json
+C:\Users\labtab\Desktop\shared\gen_learning_practice\c#\plural_aspnetcore_fundamentals\OdeToFood2\OdeToFood2\bin\Debug\netcoreapp2.2\OdeToFood2.dll
+C:\Users\labtab\Desktop\shared\gen_learning_practice\c#\plural_aspnetcore_fundamentals\OdeToFood2\OdeToFood2\bin\Debug\netcoreapp2.2\OdeToFood2.pdb
+C:\Users\labtab\Desktop\shared\gen_learning_practice\c#\plural_aspnetcore_fundamentals\OdeToFood2\OdeToFood2\obj\Debug\netcoreapp2.2\OdeToFood2.csprojAssemblyReference.cache
+C:\Users\labtab\Desktop\shared\gen_learning_practice\c#\plural_aspnetcore_fundamentals\OdeToFood2\OdeToFood2\obj\Debug\netcoreapp2.2\OdeToFood2.csproj.CoreCompileInputs.cache
+C:\Users\labtab\Desktop\shared\gen_learning_practice\c#\plural_aspnetcore_fundamentals\OdeToFood2\OdeToFood2\obj\Debug\netcoreapp2.2\OdeToFood2.RazorAssemblyInfo.cache
+C:\Users\labtab\Desktop\shared\gen_learning_practice\c#\plural_aspnetcore_fundamentals\OdeToFood2\OdeToFood2\obj\Debug\netcoreapp2.2\OdeToFood2.RazorAssemblyInfo.cs
+C:\Users\labtab\Desktop\shared\gen_learning_practice\c#\plural_aspnetcore_fundamentals\OdeToFood2\OdeToFood2\obj\Debug\netcoreapp2.2\OdeToFood2.AssemblyInfoInputs.cache
+C:\Users\labtab\Desktop\shared\gen_learning_practice\c#\plural_aspnetcore_fundamentals\OdeToFood2\OdeToFood2\obj\Debug\netcoreapp2.2\OdeToFood2.AssemblyInfo.cs
+C:\Users\labtab\Desktop\shared\gen_learning_practice\c#\plural_aspnetcore_fundamentals\OdeToFood2\OdeToFood2\obj\Debug\netcoreapp2.2\OdeToFood2.RazorTargetAssemblyInfo.cache
+C:\Users\labtab\Desktop\shared\gen_learning_practice\c#\plural_aspnetcore_fundamentals\OdeToFood2\OdeToFood2\obj\Debug\netcoreapp2.2\OdeToFood2.dll
+C:\Users\labtab\Desktop\shared\gen_learning_practice\c#\plural_aspnetcore_fundamentals\OdeToFood2\OdeToFood2\obj\Debug\netcoreapp2.2\OdeToFood2.pdb
