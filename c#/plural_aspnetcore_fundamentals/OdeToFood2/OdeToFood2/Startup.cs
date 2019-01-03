@@ -27,9 +27,10 @@ namespace OdeToFood2
             {
                 app.UseDeveloperExceptionPage();
             }
+            //app.UseDefaultFiles();
+            //// this needs to be before static files for it default files to work, order matters with middleware
+            //app.UseStaticFiles();
 
-            app.UseStaticFiles();
-            app.UseDefaultFiles();
 
             //app.Use(next =>
             //{
@@ -55,6 +56,9 @@ namespace OdeToFood2
             //{
             //    Path="/wp"
             //});
+
+
+            app.UseFileServer();
 
             app.Run(async (context) =>
             {
