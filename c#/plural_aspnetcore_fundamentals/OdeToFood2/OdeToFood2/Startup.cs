@@ -23,40 +23,43 @@ namespace OdeToFood2
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, IGreeter greeter, ILogger<Startup> logger)
         {
-            //if (env.IsDevelopment())
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+
+            app.UseStaticFiles();
+            app.UseDefaultFiles();
+
+            //app.Use(next =>
             //{
-            //    app.UseDeveloperExceptionPage();
-            //}
+            //    return async context =>
+            //    {
+            //        logger.LogInformation("Request incoming");
 
-            app.Use(next =>
-            {
-                return async context =>
-                {
-                    logger.LogInformation("Request incoming");
+            //        if(context.Request.Path.StartsWithSegments("/mym"))
+            //        {
+            //            await context.Response.WriteAsync("Hit!");
+            //            logger.LogInformation("Request handled");
+            //        }
+            //        else
+            //        {
+            //            await next(context);
+            //            logger.LogInformation("Request outgoing");
+            //        }
 
-                    if(context.Request.Path.StartsWithSegments("/mym"))
-                    {
-                        await context.Response.WriteAsync("Hit!");
-                        logger.LogInformation("Request handled");
-                    }
-                    else
-                    {
-                        await next(context);
-                        logger.LogInformation("Request outgoing");
-                    }
+            //    };
+            //});
 
-                };
-            });
-
-            app.UseWelcomePage(new WelcomePageOptions
-            {
-                Path="/wp"
-            });
+            //app.UseWelcomePage(new WelcomePageOptions
+            //{
+            //    Path="/wp"
+            //});
 
             app.Run(async (context) =>
             {
                 var greeting = greeter.GetMessageOfTheDay();
-                await context.Response.WriteAsync(greeting);
+                await context.Response.WriteAsync($"{greeting} : {env.EnvironmentName}");
             });
         }
     }
