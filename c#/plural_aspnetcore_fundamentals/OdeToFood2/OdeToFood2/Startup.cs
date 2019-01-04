@@ -18,6 +18,7 @@ namespace OdeToFood2
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IGreeter, Greeter>();
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -27,38 +28,11 @@ namespace OdeToFood2
             {
                 app.UseDeveloperExceptionPage();
             }
-            //app.UseDefaultFiles();
-            //// this needs to be before static files for it default files to work, order matters with middleware
-            //app.UseStaticFiles();
 
+            app.UseStaticFiles();
 
-            //app.Use(next =>
-            //{
-            //    return async context =>
-            //    {
-            //        logger.LogInformation("Request incoming");
+            app.UseMvcWithDefaultRoute();
 
-            //        if(context.Request.Path.StartsWithSegments("/mym"))
-            //        {
-            //            await context.Response.WriteAsync("Hit!");
-            //            logger.LogInformation("Request handled");
-            //        }
-            //        else
-            //        {
-            //            await next(context);
-            //            logger.LogInformation("Request outgoing");
-            //        }
-
-            //    };
-            //});
-
-            //app.UseWelcomePage(new WelcomePageOptions
-            //{
-            //    Path="/wp"
-            //});
-
-
-            app.UseFileServer();
 
             app.Run(async (context) =>
             {
