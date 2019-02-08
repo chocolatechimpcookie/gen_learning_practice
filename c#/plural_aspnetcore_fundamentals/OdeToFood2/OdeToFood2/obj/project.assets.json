@@ -14427,7 +14427,8 @@
         "netcoreapp2.2"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://www.nuget.org/api/v2/": {}
       },
       "frameworks": {
         "netcoreapp2.2": {
