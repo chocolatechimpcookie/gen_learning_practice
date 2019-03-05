@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using OdeToFood2.Services;
 
 namespace OdeToFood2
 {
@@ -19,6 +20,11 @@ namespace OdeToFood2
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IGreeter, Greeter>();
+                //create an instance of greeter and use it in the application everywhere
+            services.AddScoped<IRestaurantData, InMemoryRestaurantData>();  
+                //An component that needs IRestaurantData create an instance for each http request and reuse that instance throughout that one request
+                // after that throw it away and create another instance for the next request
+                // this is typically what you want for a data access component
             services.AddMvc();
         }
 

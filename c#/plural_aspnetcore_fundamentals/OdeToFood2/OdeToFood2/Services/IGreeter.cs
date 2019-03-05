@@ -1,4 +1,4 @@
-﻿namespace OdeToFood2
+﻿namespace OdeToFood2.Services
 {
     public interface IGreeter
     {
