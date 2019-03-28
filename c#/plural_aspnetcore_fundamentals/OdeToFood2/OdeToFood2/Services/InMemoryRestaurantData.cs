@@ -24,6 +24,14 @@ namespace OdeToFood2.Services
             return _restaurants.OrderBy(r => r.Name);
         }
 
+        public Restaurant Get(int id)
+        {
+            return _restaurants.FirstOrDefault(r => r.Id == id);
+            //find me the first restaurant with this id, or return r, restaurant
+
+
+        }
+
         List<Restaurant> _restaurants;
     }
 }

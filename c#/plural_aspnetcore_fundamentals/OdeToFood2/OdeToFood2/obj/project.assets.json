@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\laptop\\Desktop\\gen_learning_practice-master\\c#\\plural_aspnetcore_fundamentals\\OdeToFood2\\OdeToFood2\\OdeToFood2.csproj",
+      "projectUniqueName": "C:\\Users\\laptop\\Desktop\\gen_learning_practice\\c#\\plural_aspnetcore_fundamentals\\OdeToFood2\\OdeToFood2\\OdeToFood2.csproj",
       "projectName": "OdeToFood2",
-      "projectPath": "C:\\Users\\laptop\\Desktop\\gen_learning_practice-master\\c#\\plural_aspnetcore_fundamentals\\OdeToFood2\\OdeToFood2\\OdeToFood2.csproj",
+      "projectPath": "C:\\Users\\laptop\\Desktop\\gen_learning_practice\\c#\\plural_aspnetcore_fundamentals\\OdeToFood2\\OdeToFood2\\OdeToFood2.csproj",
       "packagesPath": "C:\\Users\\laptop\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\laptop\\Desktop\\gen_learning_practice-master\\c#\\plural_aspnetcore_fundamentals\\OdeToFood2\\OdeToFood2\\obj\\",
+      "outputPath": "C:\\Users\\laptop\\Desktop\\gen_learning_practice\\c#\\plural_aspnetcore_fundamentals\\OdeToFood2\\OdeToFood2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
