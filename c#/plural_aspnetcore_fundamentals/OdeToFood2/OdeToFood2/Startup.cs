@@ -21,7 +21,7 @@ namespace OdeToFood2
         {
             services.AddSingleton<IGreeter, Greeter>();
                 //create an instance of greeter and use it in the application everywhere
-            services.AddScoped<IRestaurantData, InMemoryRestaurantData>();  
+            services.AddSingleton<IRestaurantData, InMemoryRestaurantData>();  
                 //An component that needs IRestaurantData create an instance for each http request and reuse that instance throughout that one request
                 // after that throw it away and create another instance for the next request
                 // this is typically what you want for a data access component

@@ -32,6 +32,13 @@ namespace OdeToFood2.Services
 
         }
 
+        public Restaurant Add(Restaurant restaurant)
+        {
+            restaurant.Id = _restaurants.Max(restaurant => r.Id) + 1;
+            _restaurants.Add(restaurant);
+            return restaurant;
+        }
+
         List<Restaurant> _restaurants;
     }
 }
