@@ -5,11 +5,18 @@
 
 <form method="post">
 
-    <input asp-for="Name" />
+    <div>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" /></div>
+        <span asp-validation-for="Name"></span>
+        <div>
+            <label asp-for="Cuisine"></label>
+            <select>
+                <option asp-for="Cuisine" asp-items="@Html.GetEnumSelectList<CuisineType>()"</option>
+            </select>
+            <span asp-validation-for="Cuisine"></span>
 
-    <select>
-        <option asp-for="Cuisine" asp-items="@Html.GetEnumSelectList<CuisineType>()"</option>
-    </select>
+        </div>
 
     <input type="submit" name="save" value="Save" />
 
