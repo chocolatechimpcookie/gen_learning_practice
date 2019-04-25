@@ -1,0 +1,52 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\cina\\Desktop\\gen_learning_practice\\c#\\plural_aspnetcore_fundamentals\\OdeToFood2\\OdeToFood2\\OdeToFood2.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\cina\\Desktop\\gen_learning_practice\\c#\\plural_aspnetcore_fundamentals\\OdeToFood2\\OdeToFood2\\OdeToFood2.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\cina\\Desktop\\gen_learning_practice\\c#\\plural_aspnetcore_fundamentals\\OdeToFood2\\OdeToFood2\\OdeToFood2.csproj",
+        "projectName": "OdeToFood2",
+        "projectPath": "C:\\Users\\cina\\Desktop\\gen_learning_practice\\c#\\plural_aspnetcore_fundamentals\\OdeToFood2\\OdeToFood2\\OdeToFood2.csproj",
+        "packagesPath": "C:\\Users\\cina\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cina\\Desktop\\gen_learning_practice\\c#\\plural_aspnetcore_fundamentals\\OdeToFood2\\OdeToFood2\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\cina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

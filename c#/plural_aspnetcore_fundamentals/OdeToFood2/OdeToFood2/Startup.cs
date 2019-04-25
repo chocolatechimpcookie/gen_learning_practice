@@ -9,19 +9,28 @@ using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
 using OdeToFood2.Services;
 
 namespace OdeToFood2
 {
     public class Startup
     {
+        private IConfiguration _configuration;
+        public Startup(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IGreeter, Greeter>();
-                //create an instance of greeter and use it in the application everywhere
-            services.AddSingleton<IRestaurantData, InMemoryRestaurantData>();  
+            //create an instance of greeter and use it in the application everywhere
+            services.AddDbContext<OdeToFood2DbContext>(
+                options => options.UseSqlServer(_configuration.GetConnectionString("OdeToFood")));
+            services.AddScoped<IRestaurantData, SqlRestaurantData>();  
                 //An component that needs IRestaurantData create an instance for each http request and reuse that instance throughout that one request
                 // after that throw it away and create another instance for the next request
                 // this is typically what you want for a data access component
