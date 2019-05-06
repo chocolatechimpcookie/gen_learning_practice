@@ -11,13 +11,15 @@ namespace OdeToFood2.Pages
     {
         private IGreeter _greeter;
 
+        public string CurrentGreeting { get; set; }
 
         public GreetingModel(IGreeter greeter)
         {
             _greeter = greeter;
         }
-        public void OnGet()
+        public void OnGet(string name)
         {
+            CurrentGreeting = $"{name}: {_greeter.GetMessageOfTheDay()}";
         }
     }
 }
