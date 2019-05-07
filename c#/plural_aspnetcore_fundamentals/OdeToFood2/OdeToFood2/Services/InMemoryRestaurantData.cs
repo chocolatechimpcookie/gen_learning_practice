@@ -6,7 +6,7 @@ using OdeToFood2.Models;
 
 namespace OdeToFood2.Services
 {
-    public class InMemoryRestaurantData : IRestaurantData
+    //public class InMemoryRestaurantData : IRestaurantData
     {
         public InMemoryRestaurantData()
         {
