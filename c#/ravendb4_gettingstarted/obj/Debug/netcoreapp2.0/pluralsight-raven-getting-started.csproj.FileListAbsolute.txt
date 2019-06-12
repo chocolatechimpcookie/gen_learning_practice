@@ -1,0 +1,11 @@
+C:\Users\cina\Desktop\gen_learning_practice\c#\ravendb4_gettingstarted\bin\Debug\netcoreapp2.0\pluralsight-raven-getting-started.deps.json
+C:\Users\cina\Desktop\gen_learning_practice\c#\ravendb4_gettingstarted\bin\Debug\netcoreapp2.0\pluralsight-raven-getting-started.runtimeconfig.json
+C:\Users\cina\Desktop\gen_learning_practice\c#\ravendb4_gettingstarted\bin\Debug\netcoreapp2.0\pluralsight-raven-getting-started.runtimeconfig.dev.json
+C:\Users\cina\Desktop\gen_learning_practice\c#\ravendb4_gettingstarted\bin\Debug\netcoreapp2.0\pluralsight-raven-getting-started.dll
+C:\Users\cina\Desktop\gen_learning_practice\c#\ravendb4_gettingstarted\bin\Debug\netcoreapp2.0\pluralsight-raven-getting-started.pdb
+C:\Users\cina\Desktop\gen_learning_practice\c#\ravendb4_gettingstarted\obj\Debug\netcoreapp2.0\pluralsight-raven-getting-started.csprojAssemblyReference.cache
+C:\Users\cina\Desktop\gen_learning_practice\c#\ravendb4_gettingstarted\obj\Debug\netcoreapp2.0\pluralsight-raven-getting-started.csproj.CoreCompileInputs.cache
+C:\Users\cina\Desktop\gen_learning_practice\c#\ravendb4_gettingstarted\obj\Debug\netcoreapp2.0\pluralsight-raven-getting-started.AssemblyInfoInputs.cache
+C:\Users\cina\Desktop\gen_learning_practice\c#\ravendb4_gettingstarted\obj\Debug\netcoreapp2.0\pluralsight-raven-getting-started.AssemblyInfo.cs
+C:\Users\cina\Desktop\gen_learning_practice\c#\ravendb4_gettingstarted\obj\Debug\netcoreapp2.0\pluralsight-raven-getting-started.dll
+C:\Users\cina\Desktop\gen_learning_practice\c#\ravendb4_gettingstarted\obj\Debug\netcoreapp2.0\pluralsight-raven-getting-started.pdb
