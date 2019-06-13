@@ -20,12 +20,41 @@ namespace Sample.Services
         
         public async Task<Talk> CreateTalk(NewTalk talk)
         {
-            throw new NotImplementedException("TODO: Implement CreateTalk");
+            using (var session = this.store.OpenAsyncSession())
+            {
+                var newTalk = new Talk()
+                {
+                    Headline = talk.Headline,
+                    Description = talk.Description,
+                    Speaker = talk.Speaker
+                };
+
+                await session.StoreAsync(newTalk);
+                await session.SaveChangesAsync();
+
+                return newTalk;
+            }
         }
 
         public async Task<TalkDetail> GetTalkDetail(string id)
         {
-            throw new NotImplementedException("TODO: Implement GetTalkDetail");
+            using (var session = this.store.OpenAsyncSession())
+            {
+                var talk = await session.LoadAsync<Talk>(id);
+
+                return new TalkDetail()
+                {
+                    Id = talk.Id,
+                    Headline = talk.Headline,
+                    Description = talk.Description,
+                    Event = talk.Event,
+                    Published = talk.Published,
+                    Tags = talk.Tags,
+                    Speaker = talk.Speaker,
+                    SpeakerTalks = new TalkSummary[] { }
+
+                };
+            }
         }
 
         public async Task<Speaker[]> GetSpeakers() {
