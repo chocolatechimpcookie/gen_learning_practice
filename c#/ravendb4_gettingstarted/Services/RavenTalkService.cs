@@ -40,7 +40,12 @@ namespace Sample.Services
         {
             using (var session = this.store.OpenAsyncSession())
             {
-                var talk = await session.LoadAsync<Talk>(id);
+
+                //var talk = await session.LoadAsync<Talk>(id);
+                var talk = await session.Include<Talk>( t => t.Speaker).LoadAsync(id);
+                var speaker = await session.LoadAsync<Speaker>(talk.Speaker);
+
+                var requests = session.Advanced.NumberOfRequests;
 
                 return new TalkDetail()
                 {
@@ -51,6 +56,7 @@ namespace Sample.Services
                     Published = talk.Published,
                     Tags = talk.Tags,
                     Speaker = talk.Speaker,
+                    SpeakerName = speaker.Name,
                     SpeakerTalks = new TalkSummary[] { }
 
                 };
