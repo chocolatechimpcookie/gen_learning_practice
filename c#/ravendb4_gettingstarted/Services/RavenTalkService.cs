@@ -64,18 +64,42 @@ namespace Sample.Services
         }
 
         public async Task<Speaker[]> GetSpeakers() {
-            throw new NotImplementedException("TODO: Implement GetSpeakers");
+            using (var session = this.store.OpenAsyncSession())
+            {
+                var speakers = await 
+                    session.Advanced.LoadStartingWithAsync<Speaker>("Speakers/", start: 0, pageSize: Constants.PageSize);
+                return speakers.ToArray();
+            }
         }
         
         public async Task<Talk> UpdateTalk(string id, UpdatedTalk talk, string version)
         {
-            throw new NotImplementedException("TODO: Implement UpdateTalk");
+            using (var session = this.store.OpenAsyncSession())
+            {
+                //Load existing talk
+                var existingTalk = await session.LoadAsync<Talk>(id);
+
+                //update properties
+                existingTalk.Headline = talk.Headline;
+                existingTalk.Description = talk.Description;
+                existingTalk.Speaker = talk.Speaker;
+
+                await session.SaveChangesAsync();
+
+                return existingTalk;
+            }
         }
 
         public async Task<bool> DeleteTalk(string id)
         {
-            throw new NotImplementedException("TODO: Implement DeleteTalk");
+            using (var session = this.store.OpenAsyncSession())
+            {
+                session.Delete(id);
+                await session.SaveChangesAsync();
+                return true;
+            }
         }
+
 
         public async Task<SpeakerTalkStats[]> GetSpeakerTalkStats() {
             throw new NotImplementedException("TODO: Implement GetSpeakerTalkStats");
@@ -88,7 +112,18 @@ namespace Sample.Services
 
         public async Task<(UpdatedTalk Talk, string Version)> GetTalkForEditing(string id)
         {
-            throw new NotImplementedException("TODO: Implement GetTalkForEditing");
+            using (var session = this.store.OpenAsyncSession())
+            {
+                var talk = await session.LoadAsync<Talk>(id);
+                var updatedTalk = new UpdatedTalk()
+                {
+                    Headline = talk.Headline,
+                    Description = talk.Description,
+                    Speaker = talk.Speaker
+                };
+
+                return (Talk: updatedTalk, Version: null);
+            }
         }
 
         public async Task<TalkSummary[]> GetTalkSummaries(int page = 1)
