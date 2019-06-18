@@ -27,6 +27,10 @@ namespace Sample
                 Urls = new[] { settings.Url },
                 Database = settings.Database
             };
+
+
+            //Store.Conventions.UseOptimisticConcurrency = true;
+
             Store.Initialize();
             CreateDatabaseIfNotExists();
             using (var session = Store.OpenSession())

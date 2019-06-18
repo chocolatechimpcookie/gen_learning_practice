@@ -6,6 +6,7 @@ using Raven.Client.Documents;
 using System.Linq;
 using Raven.Client.Documents.Session;
 using Raven.Client.Documents.Queries;
+using Raven.Client.Exceptions;
 
 namespace Sample.Services
 {
@@ -84,9 +85,35 @@ namespace Sample.Services
                 existingTalk.Description = talk.Description;
                 existingTalk.Speaker = talk.Speaker;
 
-                await session.SaveChangesAsync();
+                try
+                {
+                    await session.StoreAsync(existingTalk, version, id);
+                    await session.SaveChangesAsync();
+
+                }
+                catch (ConcurrencyException cex)
+                {
+                    throw new ApplicationException("Try refreshing the page: " + cex.Message + cex);
+                }
 
                 return existingTalk;
+            }
+        }
+
+        public async Task<(UpdatedTalk Talk, string Version)> GetTalkForEditing(string id)
+        {
+            using (var session = this.store.OpenAsyncSession())
+            {
+                var talk = await session.LoadAsync<Talk>(id);
+                var version = session.Advanced.GetChangeVectorFor(talk);
+                var updatedTalk = new UpdatedTalk()
+                {
+                    Headline = talk.Headline,
+                    Description = talk.Description,
+                    Speaker = talk.Speaker
+                };
+
+                return (Talk: updatedTalk, Version: version);
             }
         }
 
@@ -110,21 +137,7 @@ namespace Sample.Services
             throw new NotImplementedException("TODO: Implement GetTagTalkStats");
         }
 
-        public async Task<(UpdatedTalk Talk, string Version)> GetTalkForEditing(string id)
-        {
-            using (var session = this.store.OpenAsyncSession())
-            {
-                var talk = await session.LoadAsync<Talk>(id);
-                var updatedTalk = new UpdatedTalk()
-                {
-                    Headline = talk.Headline,
-                    Description = talk.Description,
-                    Speaker = talk.Speaker
-                };
 
-                return (Talk: updatedTalk, Version: null);
-            }
-        }
 
         public async Task<TalkSummary[]> GetTalkSummaries(int page = 1)
         {
