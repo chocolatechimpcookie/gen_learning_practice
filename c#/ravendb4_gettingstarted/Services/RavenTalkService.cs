@@ -117,6 +117,30 @@ namespace Sample.Services
             }
         }
 
+        public async Task<TalkSummary[]> GetTalkSummaries(int page = 1)
+        {
+            using (var session = this.store.OpenAsyncSession())
+            {
+                var actualPage = Math.Max(0, page - 1);
+
+                var talks = await session.Query<Talk>()
+                .Skip(page * Constants.PageSize)
+                .Take(Constants.PageSize)
+                .Select(t =>
+                new TalkSummary()
+                {
+                    Id = t.Id,
+                    Headline = t.Headline,
+                    Description = t.Description,
+                    Published = t.Published,
+                    Speaker = t.Speaker,
+                    SpeakerName = RavenQuery.Load<Speaker>(t.Speaker).Name
+                }).ToListAsync();
+
+                return talks.ToArray();
+            }
+        }
+
         public async Task<bool> DeleteTalk(string id)
         {
             using (var session = this.store.OpenAsyncSession())
@@ -139,10 +163,7 @@ namespace Sample.Services
 
 
 
-        public async Task<TalkSummary[]> GetTalkSummaries(int page = 1)
-        {
-            throw new NotImplementedException("TODO: Implement GetTalkSummaries");
-        }
+
 
         public async Task<TalkSummary[]> GetTalksBySpeaker(string speaker, int show)
         {

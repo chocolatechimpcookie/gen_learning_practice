@@ -30,6 +30,10 @@ namespace Sample
 
 
             //Store.Conventions.UseOptimisticConcurrency = true;
+            //Store.Conventions.CustomizeJsonSerializer = (serializer) =>
+            //{
+            //    serializer.
+            //}
 
             Store.Initialize();
             CreateDatabaseIfNotExists();
