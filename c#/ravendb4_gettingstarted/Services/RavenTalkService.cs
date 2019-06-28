@@ -122,8 +122,14 @@ namespace Sample.Services
             using (var session = this.store.OpenAsyncSession())
             {
                 var actualPage = Math.Max(0, page - 1);
-
+                QueryStatistics stats;
                 var talks = await session.Query<Talk>()
+                .Statistics(out stats)
+                .Customize(x =>
+                {
+                    x.WaitForNonStaleResults();
+                })
+                //this can throw a timeout exception since you are waiting for potentially 30 seconds for the results of a query
                 .Skip(page * Constants.PageSize)
                 .Take(Constants.PageSize)
                 .Select(t =>
