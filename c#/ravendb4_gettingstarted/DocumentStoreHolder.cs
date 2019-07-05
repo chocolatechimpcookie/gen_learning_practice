@@ -2,8 +2,10 @@ using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Raven.Client.Documents;
+using Raven.Client.Documents.Indexes;
 using Raven.Client.ServerWide;
 using Raven.Client.ServerWide.Operations;
+using Sample.Indexes;
 using Sample.Models;
 using Sample.Services;
 
@@ -37,6 +39,12 @@ namespace Sample
 
             Store.Initialize();
             CreateDatabaseIfNotExists();
+
+            IndexCreation.CreateIndexes(
+                typeof(Talks_BySpeaker).Assembly,
+                Store
+            );
+
             using (var session = Store.OpenSession())
             {
                 session.Load<Talk>("Talks/1");
