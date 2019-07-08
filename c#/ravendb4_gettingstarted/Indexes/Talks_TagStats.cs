@@ -7,26 +7,26 @@ using Sample.Models;
 
 namespace Sample.Indexes
 {
-    public class Talks_SpeakerStats : AbstractIndexCreationTask<Talk, SpeakerTalkStats>
+    public class Talks_TagStats : AbstractIndexCreationTask<Talk, TagTalkStats>
     {
-        public Talks_SpeakerStats()
+        public Talks_TagStats()
         {
-            Map = talks =>
+            Map = talks =
                 from talk in talks
+                from tag in talk.Tags
                 select new
                 {
-                    Id = talk.Speaker,
-                    SpeakerName = LoadDocument<Speaker>(talk.Speaker).Name,
+                    Tag = tag,
                     Count = 1
                 };
             Reduce = results =>
                 from rr in results
-                group rr by rr.SpeakerName into g
+                group rr by rr.Tag into g
                 select new
                 {
-                    SpeakerName = g.Key,
-                    Id = g.First().Id,
-                    Count = g.Sum(r=> r.Count)
+                    Tag = g.Key,
+                    Count = g.Sum(results => r.Count)
+
                 };
         }
     }   
