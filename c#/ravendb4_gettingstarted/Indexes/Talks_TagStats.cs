@@ -11,7 +11,7 @@ namespace Sample.Indexes
     {
         public Talks_TagStats()
         {
-            Map = talks =
+            Map = talks =>
                 from talk in talks
                 from tag in talk.Tags
                 select new
@@ -25,7 +25,7 @@ namespace Sample.Indexes
                 select new
                 {
                     Tag = g.Key,
-                    Count = g.Sum(results => r.Count)
+                    Count = g.Sum(r => r.Count)
 
                 };
         }
