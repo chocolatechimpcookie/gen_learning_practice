@@ -236,7 +236,29 @@ namespace Sample.Services
 
         public async Task<TalkSummary[]> SearchTalks(string search, int page = 1)
         {
-            throw new NotImplementedException("TODO: Implement SearchTalks");
+            using (var session = this.store.OpenAsyncSession())
+            {
+                var actualPage = Math.Max(0, page - 1);
+                var normalizedSearch = search.ToLowerInvariant();
+
+                var results = await session.Query<Talk, Talks_Search>()
+                    .Search(t => t.Headline, search, boost: 2)
+                    .Search(t => t.Description, search)
+                    .Skip(actualPage * Constants.PageSize)
+                    .Take(Constants.PageSize)
+                    .Select(t => new TalkSummary()
+                    {
+                        Id = t.Id,
+                        Headline = t.Headline,
+                        Description = t.Description,
+                        Published = t.Published,
+                        Speaker = t.Speaker,
+                        SpeakerName = RavenQuery.Load<Speaker>(t.Speaker).Name
+                    })
+                    .ToListAsync();
+
+                return results.ToArray();
+            }
         }
     }
 }
