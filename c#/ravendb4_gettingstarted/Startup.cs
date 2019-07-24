@@ -38,7 +38,7 @@ namespace Sample
             services.AddTransient<TalkServiceProvider, TalkServiceProvider>();
 
             // Static load
-            InMemoryTalkService.Load(CsvData.LoadTalks(), CsvData.LoadSpeakers());
+            //InMemoryTalkService.Load(CsvData.LoadTalks(), CsvData.LoadSpeakers());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

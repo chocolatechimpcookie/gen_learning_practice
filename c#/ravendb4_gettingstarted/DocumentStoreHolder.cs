@@ -68,37 +68,37 @@ namespace Sample
 
                 var createResult = Store.Admin.Server.Send(new CreateDatabaseOperation(dbRecord));
 
-                if (createResult.Name != null)
-                {
-                    // Seed database
-                    var talks = CsvData.LoadTalks();
-                    var speakers = CsvData.LoadSpeakers();
+                //if (createResult.Name != null)
+                //{
+                //    // Seed database
+                //    var talks = CsvData.LoadTalks();
+                //    var speakers = CsvData.LoadSpeakers();
 
-                    // old => new speaker ID map
-                    var speakerIdMap = new Dictionary<string, string>();
+                //    // old => new speaker ID map
+                //    var speakerIdMap = new Dictionary<string, string>();
 
-                    using (var session = Store.OpenSession())
-                    {
-                        foreach (var speaker in speakers)
-                        {
-                            var oldId = speaker.Id;
-                            speaker.Id = null;
-                            session.Store(speaker);
-                            speakerIdMap.Add(oldId, speaker.Id);
-                        }
+                //    using (var session = Store.OpenSession())
+                //    {
+                //        foreach (var speaker in speakers)
+                //        {
+                //            var oldId = speaker.Id;
+                //            speaker.Id = null;
+                //            session.Store(speaker);
+                //            speakerIdMap.Add(oldId, speaker.Id);
+                //        }
 
-                        foreach (var talk in talks)
-                        {
-                            talk.Id = null;
-                            talk.Speaker = speakerIdMap[talk.Speaker];
-                            session.Store(talk);
-                        }
-                        session.SaveChanges();
-                    }
+                //        foreach (var talk in talks)
+                //        {
+                //            talk.Id = null;
+                //            talk.Speaker = speakerIdMap[talk.Speaker];
+                //            session.Store(talk);
+                //        }
+                //        session.SaveChanges();
+                //    }
 
-                    this._logger.LogInformation("Seeded database with {0} talks", talks.Count);
-                    this._logger.LogInformation("Seeded database with {0} speakers", speakers.Count);
-                }
+                //    this._logger.LogInformation("Seeded database with {0} talks", talks.Count);
+                //    this._logger.LogInformation("Seeded database with {0} speakers", speakers.Count);
+                //}
             }
         }
     }
