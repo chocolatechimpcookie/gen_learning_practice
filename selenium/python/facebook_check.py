@@ -1,14 +1,25 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+import time
 
-username = raw_input()
-password = raw_input()
-print(username)
-
+username_input = raw_input()
+password_input = raw_input()
+print(username_input)
 driver = webdriver.Firefox()
+
 driver.get("http://www.instagram.com")
-# login_button = driver.find_elements_by_xpath("//a[text() = 'Log in']")
-# login_button = driver.find_elements_by_xpath("/html[@class='js not-logged-in client-root js-focus-visible sDN5V']/body/span[@id='react-root']/section[@class='_9eogI E3X2T']/main[@class='SCxLW  o64aR']/article[@class='_4_yKc']/div[@class='rgFsT ']/div[@class='gr27e']/p[@class='izU2O']/a[@class='focus-visible']")
+# driver.get("https://www.google.com")
+time.sleep(3)
+login_button = driver.find_element_by_xpath("//a[@href = '/accounts/login/?source=auth_switcher']")
 print("login")
-print(login_button)
+# print(login_button)
 login_button.click()
+
+time.sleep(1)
+username_field = driver.find_element_by_xpath("//input[@name= 'username']")
+username_field.send_keys(username_input)
+password_field = driver.find_element_by_xpath("//input[@name= 'password']")
+password_field.send_keys(password_input)
+
+submit_login = driver.find_element_by_xpath("//button[@type='submit']")
+submit_login.click()
