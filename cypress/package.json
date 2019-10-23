@@ -1,0 +1,16 @@
+{
+  "name": "bitly2_test",
+  "version": "1.0.0",
+  "author": "Alicina Memar",
+  "description": "Bitly test plan by Alicina Memar",
+  "main": "index.js",
+  "dependencies": {
+    "cypress": "^3.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "cypress:open": "cypress open"
+  },
+  "author": "",
+  "license": "ISC"
+}
