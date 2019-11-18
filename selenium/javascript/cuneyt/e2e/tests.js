@@ -9,8 +9,10 @@ chai.use(chaiAsPromised);
 const driver = new webdriver.Builder().forBrowser('chrome').build();
 const expect = chai.expect;
 
-describe('End to End Test Suite', done => {
-  before(done => {
+describe('End to End Test Suite', done =>
+{
+  before(done =>
+  {
     console.log('Before everything login to the page');
     driver.get('http://localhost:3003').then(function(res) {
       driver
